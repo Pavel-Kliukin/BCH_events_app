@@ -7,7 +7,7 @@ import Home from './components/Home';
 function App() {
   return (
     <Router>
-    <Navigation />
+    <Navigation /> 
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/EventForm" element={<EventForm />} />
