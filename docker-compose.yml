@@ -1,19 +1,22 @@
 version: '3'
 services:
-  express:
+  mongo:
+    image: mongo
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - 27017:27017
+
+  app:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - 4000:4000
-    volumes:
-      - .:/app
+    environment:
+      MONGO_DB: your_db_name
     depends_on:
       - mongo
-    environment:
-      - MONGO_DB=mydatabase
+    ports:
+      - 5000:5000
 
-  mongo:
-    image: mongo:latest
-    volumes:
-      - ./mongo-data:/data/db
+volumes:
+  mongo-data:

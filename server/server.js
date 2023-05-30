@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB database
 mongoose
-  .connect(`mongodb://mongo:27017/${process.env.MONGO_DB}`, {
+  .connect(`mongodb://mongo:27017/test`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -28,12 +28,18 @@ const eventSchema = new mongoose.Schema({
 const Event = mongoose.model('Event', eventSchema);
 
 // Define routes
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
 app.get('/events', async (req, res) => {
   const events = await Event.find();
   res.send(events);
 });
 
 app.post('/events', async (req, res) => {
+  console.log(req.body); //log the request data
+
   const newEvent = new Event({
     title: req.body.title,
     description: req.body.description,
@@ -44,5 +50,5 @@ app.post('/events', async (req, res) => {
 });
 
 // Port listening
-const port = 4000;
+const port = 5000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
