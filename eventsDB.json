@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "id":1,
+      "eventName": "Mastering the Art of Culinary Delights",
+      "parentalSeminar": 1,
+      "Description": "Indulge your passion for food as you immerse yourself in an extraordinary culinary experience. Join our event designed exclusively for food enthusiasts, where you'll embark on a journey to master the art of culinary delights and elevate your culinary skills to new heights.",
+      "day": "02.06.2023",
+      "startTime": "13:20",
+      "endTime": "16:20",
+      "signedUsers": [2, 6, 9, 7] 
+    },
+    {
+      "id":2,
+      "eventName": "From Novice to Gourmet: A Journey through the Cook Seminar",
+      "parentalSeminar": 1,
+      "Description": "Embark on an enriching culinary journey that takes you from novice to gourmet. Join our immersive cook seminar where you'll discover the secrets of the culinary world, learn essential techniques, and transform your cooking skills into gourmet-level expertise.",
+      "day": "03.06.2023",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "signedUsers": [1, 3] 
+    },
+    {
+      "id":3,
+      "eventName": "Unleash Your Inner Chef",
+      "parentalSeminar": 1,
+      "Description": "Ignite your culinary creativity and unleash your inner chef at this inspiring event. Join us for an immersive experience where you'll discover new flavors, learn advanced techniques, and gain the confidence to create exceptional dishes that showcase your true culinary artistry.",
+      "day": "07.06.2023",
+      "startTime": "17:00",
+      "endTime": "19:30",
+      "signedUsers": [4, 5, 8, 10, 11]  
+    }
+  ]
+}
