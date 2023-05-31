@@ -1,20 +1,26 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import EventForm from "./components/EventForm";
 import Layout from "./components/Layout";
-/* import Home from "./components/Home"; */
+import Signup from "./functions/Signup";
+import Login from "./functions/Login";
+import UserPage from "./components/UserPage";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
-        {/*   <Route path="/" element={<Home />} /> */}
-           <Route path="/EventForm" element={<EventForm />} />
-          </Route>
+          
+          <Route path="/" element={<Layout />} />
+       
+           <Route path="/signup" element={<Signup />} />
+
+           <Route path="/login" element={<Login />} />
+
+           <Route path="/userpage" element={<UserPage />} />
+
         </Routes>
       </BrowserRouter>
-      <EventForm />
+      
     </div>
 
   );

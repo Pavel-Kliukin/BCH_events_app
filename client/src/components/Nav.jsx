@@ -12,8 +12,11 @@ function Nav() {
         <NavLink to="FAQ">
           <li>FAQ</li>
         </NavLink>
-        <NavLink to="Log in">
+        <NavLink to="login">
           <li>Log In</li>
+        </NavLink>
+        <NavLink to="signup">
+          <li>Sign Up</li>
         </NavLink>
       </ul>
     </nav>
