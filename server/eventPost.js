@@ -1,4 +1,4 @@
-const axios = require('axios');
+/* const axios = require('axios');
 
 const events = [
   {
@@ -20,3 +20,4 @@ axios.post('http://localhost:5000/events', events)
   .catch((error) => {
     console.error(error);
   });
+ */
