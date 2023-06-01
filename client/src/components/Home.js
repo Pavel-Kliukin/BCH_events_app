@@ -14,8 +14,7 @@ const Home = () => {
     return (
         <div className={style.layout}>
             <Header />
-            <div className={`${style.content} ${style.withMargin}`}>
-
+            <div className={`${style.withMargin}`}>
                 {data.map((eventData) => (
                     <Card key={eventData.id} data={eventData} />
                 ))}
