@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Signup from "./functions/Signup";
 import Login from "./functions/Login";
 import UserPage from "./components/UserPage";
+import Seminars from "./components/Seminars";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/seminars" element={<Seminars />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/userpage" element={<UserPage />} />

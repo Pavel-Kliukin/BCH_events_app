@@ -1,0 +1,11 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Didact Gothic', sans-serif;
+    position: relative;
+  }
+
+  .withMargin {
+    margin-top: 95px; 
+  }

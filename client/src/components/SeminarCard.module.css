@@ -1,11 +1,11 @@
-  .grid-container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
   } 
   
-  .eventCard{
+  .seminarCard{
     width: 100%; /* Adjust the card width to fill the grid cell */
     border: 1px solid #ccc;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -16,22 +16,21 @@
     background-color: #f9f9f9;
   }
   
-  .event-title {
+  .seminar-title {
     font-size: 20px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
   }
   
-  .event-description {
+  .seminar-description {
     color: #666;
     font-size: 16px;
     margin-bottom: 10px;
   }
   
-  .event-date, .event-time, .event-participants {
+  .seminar-date {
     color: #333;
     font-size: 14px;
     margin-bottom: 5px;
   }
-  
