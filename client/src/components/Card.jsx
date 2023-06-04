@@ -1,4 +1,5 @@
 import style from './Card.module.css';
+import { Link } from 'react-router-dom';
 
 const Card = ({data}) => {
  
@@ -8,6 +9,7 @@ const Card = ({data}) => {
       <p className="event-description">{data.Description}</p>
       <p className="event-date">Date: {data.day}</p>
       <p className="event-time">Time: {data.startTime} - {data.endTime}</p>
+      <Link to={`/events/${data.id}`}>Read More</Link>
     {/*   <p className="event-participants">Participants: {data.signedUsers.join(', ')}</p> */}
     
     </div>

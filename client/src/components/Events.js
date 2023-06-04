@@ -6,6 +6,7 @@ import Card from './Card';
 import useFetch from '../hooks/useFetch';
 
 const Events = () => {
+   
     const { data, isLoading, error } = useFetch('http://localhost:3001/events');
 
     if (isLoading) return <div>Loading...</div>;
