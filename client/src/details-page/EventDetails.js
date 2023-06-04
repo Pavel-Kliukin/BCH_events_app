@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
-const EventDetails = ({ events, users }) => {
+const EventDetails = ({ events, users, seminars }) => {
     const { eventId } = useParams();
     const event = events.find(event => event.id === parseInt(eventId));
   
@@ -13,6 +13,10 @@ const EventDetails = ({ events, users }) => {
     const user = users.find(user => user.id === parseInt(userId));
     return user ? user.name : `User with ID: ${userId}`;
   });
+
+  const parentalSeminar = seminars.find(
+    (seminar) => seminar.id === event.parentalSeminar
+  );
   
     return (
         <div>
@@ -26,6 +30,14 @@ const EventDetails = ({ events, users }) => {
           <li key={participant}>{participant}</li>
         ))}
       </ul>
+      {parentalSeminar && (
+        <p>
+          This event is hosted by:{" "}
+          <Link to={`/seminars/${parentalSeminar.id}`}>
+            {parentalSeminar.seminarName}
+          </Link>
+        </p>
+      )}
       </div>
     );
   };

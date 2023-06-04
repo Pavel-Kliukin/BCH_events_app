@@ -7,27 +7,31 @@ import Signup from "./functions/Signup";
 import Login from "./functions/Login";
 import UserPage from "./components/UserPage";
 import Seminars from "./components/Seminars";
-import EventDetails from "./event-details/EventDetails";
+import EventDetails from "./details-page/EventDetails";
+import SeminarDetails from "./details-page/SeminarDetails";
 
 
 function App() {
   const eventsURL = 'http://localhost:3001/events';
   const usersURL = 'http://localhost:3001/users';
+  const seminarsURL = 'http://localhost:3001/seminars';
 
   const eventsFetch = useFetch(eventsURL);
   const usersFetch = useFetch(usersURL);
+  const seminarsFetch = useFetch(seminarsURL);
 
-  if (eventsFetch.isLoading || usersFetch.isLoading) {
+  if (eventsFetch.isLoading || usersFetch.isLoading || seminarsFetch.isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (eventsFetch.error || usersFetch.error) {
-    return <div>Error: {eventsFetch.error || usersFetch.error}</div>;
+  if (eventsFetch.error || usersFetch.error || seminarsFetch.error) {
+    return <div>Error: {eventsFetch.error || usersFetch.error || seminarsFetch.error}</div>;
   }
 
    // Use the fetched data
    const eventsData = eventsFetch.data;
    const usersData = usersFetch.data;
+   const seminarsData = seminarsFetch.data;
 
   return (
     <div className="App">
@@ -42,7 +46,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/userpage" element={<UserPage />} />
 
-            <Route path="/events/:eventId" element={<EventDetails events={eventsData} users={usersData} />} /> 
+            <Route path="/events/:eventId" element={<EventDetails events={eventsData} users={usersData} seminars={seminarsData} />} />
+
+            <Route path="/seminars/:seminarId" element={<SeminarDetails events={eventsData} seminars={seminarsData} />} /> 
 
           </Routes>
        </Router>
