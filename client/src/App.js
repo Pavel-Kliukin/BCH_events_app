@@ -1,7 +1,8 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useFetch from './hooks/useFetch';
-import Home from "./components/Home";
+import Home from "./components/Home"
+import Events from "./components/Events";
 import Signup from "./functions/Signup";
 import Login from "./functions/Login";
 import UserPage from "./components/UserPage";
@@ -23,6 +24,7 @@ function App() {
       <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/seminars" element={<Seminars />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />

@@ -6,16 +6,19 @@ function Nav() {
   return (
     <nav className={classes.nav}>
       <ul>
-        <NavLink to="seminars">
+      <NavLink to="/events">
+          <li>Events</li>
+        </NavLink>
+        <NavLink to="/seminars">
           <li>Seminars</li>
         </NavLink>
-        <NavLink to="FAQ">
+        <NavLink to="/FAQ">
           <li>FAQ</li>
         </NavLink>
-        <NavLink to="login">
+        <NavLink to="/login">
           <li>Log In</li>
         </NavLink>
-        <NavLink to="signup">
+        <NavLink to="/signup">
           <li>Sign Up</li>
         </NavLink>
       </ul>
