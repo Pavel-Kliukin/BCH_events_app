@@ -9,12 +9,15 @@ import UserPage from "./components/UserPage";
 import Seminars from "./components/Seminars";
 import EventDetails from "./details-page/EventDetails";
 import SeminarDetails from "./details-page/SeminarDetails";
+import EventForm from "./components/EventForm";
 
 
 function App() {
   const eventsURL = 'http://localhost:3001/events';
   const usersURL = 'http://localhost:3001/users';
   const seminarsURL = 'http://localhost:3001/seminars';
+
+  const eventForm = 'http://localhost:3001/eventForm';
 
   const eventsFetch = useFetch(eventsURL);
   const usersFetch = useFetch(usersURL);
@@ -45,7 +48,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/userpage" element={<UserPage />} />
-
+            <Route path="/eventForm" element={<EventForm />} />
             <Route path="/events/:eventId" element={<EventDetails events={eventsData} users={usersData} seminars={seminarsData} />} />
 
             <Route path="/seminars/:seminarId" element={<SeminarDetails events={eventsData} seminars={seminarsData} />} /> 
