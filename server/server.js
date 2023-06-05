@@ -1,4 +1,4 @@
-const express = require('express');
+/* const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -52,3 +52,4 @@ app.post('/events', async (req, res) => {
 // Port listening
 const port = 5000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
+ */

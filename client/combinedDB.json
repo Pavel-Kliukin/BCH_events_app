@@ -1,79 +1,114 @@
 {
-    "users": [
-        {
-          "name": "john doe",
-          "email": "john@example.com",
-          "phone": "0445674563",
-          "username": "john",
-          "password": "passforjohn",
-          "id": 1
-        },
-        {
-          "name": "Bob",
-          "email": "bob@example.com",
-          "phone": "0443486756",
-          "username": "bob",
-          "password": "passforbob",
-          "id": 2
-        }
-      ],
-    "events": [
-        {
-          "id":1,
-          "eventName": "Mastering the Art of Culinary Delights",
-          "parentalSeminar": 1,
-          "Description": "Indulge your passion for food as you immerse yourself in an extraordinary culinary experience. Join our event designed exclusively for food enthusiasts, where you'll embark on a journey to master the art of culinary delights and elevate your culinary skills to new heights.",
-          "day": "02.06.2023",
-          "startTime": "13:20",
-          "endTime": "16:20",
-          "signedUsers": [2, 6, 9, 7] 
-        },
-        {
-          "id":2,
-          "eventName": "From Novice to Gourmet: A Journey through the Cook Seminar",
-          "parentalSeminar": 1,
-          "Description": "Embark on an enriching culinary journey that takes you from novice to gourmet. Join our immersive cook seminar where you'll discover the secrets of the culinary world, learn essential techniques, and transform your cooking skills into gourmet-level expertise.",
-          "day": "03.06.2023",
-          "startTime": "14:00",
-          "endTime": "17:00",
-          "signedUsers": [1, 3] 
-        },
-        {
-          "id":3,
-          "eventName": "Unleash Your Inner Chef",
-          "parentalSeminar": 1,
-          "Description": "Ignite your culinary creativity and unleash your inner chef at this inspiring event. Join us for an immersive experience where you'll discover new flavors, learn advanced techniques, and gain the confidence to create exceptional dishes that showcase your true culinary artistry.",
-          "day": "07.06.2023",
-          "startTime": "17:00",
-          "endTime": "19:30",
-          "signedUsers": [4, 5, 8, 10, 11]  
-        }
-      ],
-    "seminars": [
-        {
-          "id":1,
-          "seminarName": "Cook seminar",
-          "Description": "The Cook Seminar is an immersive culinary experience designed to inspire and educate cooking enthusiasts of all levels. Led by renowned chefs and culinary experts, this seminar offers a unique opportunity to delve into the art and science of cooking. Participants will discover a wide range of cooking techniques, from basic skills to advanced methods, as they engage in hands-on demonstrations and interactive workshops. The seminar covers various cuisines, ingredient selection, flavor profiles, and plating techniques, providing attendees with a comprehensive understanding of the culinary world. Whether you're a passionate home cook or aspiring chef, the Cook Seminar promises to ignite your culinary creativity and elevate your skills to new heights.",
-          "events_ids":[1, 3, 11],
-          "startDay": "02.06.2023",
-          "endDay": "07.06.2023"
-        },
-        {
-          "id":2,
-          "seminarName": "Full Stack Web Developers seminar",
-          "Description": "The Full Stack Web Developers Seminar is an intensive event aimed at educating and inspiring individuals in the field of web development. Led by experienced industry professionals, this seminar provides a comprehensive exploration of the skills and technologies required to become a successful full stack web developer. Participants will engage in hands-on workshops and interactive sessions covering front-end and back-end development, databases, server management, API integration, and more. Whether you're a beginner looking to enter the field or an experienced developer seeking to expand your skill set, this seminar offers valuable insights, practical knowledge, and networking opportunities to enhance your career in full stack web development.",
-          "events_ids":[2, 6, 7, 8],
-          "startDay": "05.06.2023",
-          "endDay": "14.06.2023"
-        },
-        {
-          "id":3,
-          "seminarName": "Cars owners seminar",
-          "Description": "The Cars Owners Seminar is a dynamic event designed to empower and educate automobile owners of all levels of experience. Led by automotive experts and industry professionals, this seminar offers a unique opportunity to delve into the world of car ownership. Participants will gain valuable insights into maintenance best practices, troubleshooting common issues, and optimizing the performance of their vehicles. From basic maintenance tasks like oil changes and tire rotations to more advanced topics such as engine diagnostics and electrical systems, the seminar covers a wide range of automotive knowledge. Whether you're a novice car owner or a seasoned enthusiast, this seminar provides a valuable platform to enhance your understanding, confidence, and enjoyment of owning and maintaining your car.",
-          "events_ids":[4, 5, 9, 10],
-          "startDay": "06.06.2023",
-          "endDay": "11.06.2023"
-        }
+  "users": [
+    {
+      "name": "john doe",
+      "email": "john@example.com",
+      "phone": "0445674563",
+      "username": "john",
+      "password": "passforjohn",
+      "id": 1
+    },
+    {
+      "name": "Bob",
+      "email": "bob@example.com",
+      "phone": "0443486756",
+      "username": "bob",
+      "password": "passforbob",
+      "id": 2
+    },
+    {
+      "name": "Moomin",
+      "email": "moomin@gmail.com",
+      "phone": "123123123",
+      "username": "TipsyMoomin",
+      "password": "Password",
+      "id": 3
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "eventName": "Mastering the Art of Culinary Delights",
+      "parentalSeminar": 1,
+      "Description": "Indulge your passion for food as you immerse yourself in an extraordinary culinary experience. Join our event designed exclusively for food enthusiasts, where you'll embark on a journey to master the art of culinary delights and elevate your culinary skills to new heights.",
+      "day": "02.06.2023",
+      "startTime": "13:20",
+      "endTime": "16:20",
+      "signedUsers": [
+        2,
+        6,
+        9,
+        7
       ]
-  }
-  
+    },
+    {
+      "id": 2,
+      "eventName": "From Novice to Gourmet: A Journey through the Cook Seminar",
+      "parentalSeminar": 1,
+      "Description": "Embark on an enriching culinary journey that takes you from novice to gourmet. Join our immersive cook seminar where you'll discover the secrets of the culinary world, learn essential techniques, and transform your cooking skills into gourmet-level expertise.",
+      "day": "03.06.2023",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "signedUsers": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "eventName": "Unleash Your Inner Chef",
+      "parentalSeminar": 1,
+      "Description": "Ignite your culinary creativity and unleash your inner chef at this inspiring event. Join us for an immersive experience where you'll discover new flavors, learn advanced techniques, and gain the confidence to create exceptional dishes that showcase your true culinary artistry.",
+      "day": "07.06.2023",
+      "startTime": "17:00",
+      "endTime": "19:30",
+      "signedUsers": [
+        4,
+        5,
+        8,
+        10,
+        11
+      ]
+    }
+  ],
+  "seminars": [
+    {
+      "id": 1,
+      "seminarName": "Cook seminar",
+      "Description": "The Cook Seminar is an immersive culinary experience designed to inspire and educate cooking enthusiasts of all levels. Led by renowned chefs and culinary experts, this seminar offers a unique opportunity to delve into the art and science of cooking. Participants will discover a wide range of cooking techniques, from basic skills to advanced methods, as they engage in hands-on demonstrations and interactive workshops. The seminar covers various cuisines, ingredient selection, flavor profiles, and plating techniques, providing attendees with a comprehensive understanding of the culinary world. Whether you're a passionate home cook or aspiring chef, the Cook Seminar promises to ignite your culinary creativity and elevate your skills to new heights.",
+      "events_ids": [
+        1,
+        3,
+        11
+      ],
+      "startDay": "02.06.2023",
+      "endDay": "07.06.2023"
+    },
+    {
+      "id": 2,
+      "seminarName": "Full Stack Web Developers seminar",
+      "Description": "The Full Stack Web Developers Seminar is an intensive event aimed at educating and inspiring individuals in the field of web development. Led by experienced industry professionals, this seminar provides a comprehensive exploration of the skills and technologies required to become a successful full stack web developer. Participants will engage in hands-on workshops and interactive sessions covering front-end and back-end development, databases, server management, API integration, and more. Whether you're a beginner looking to enter the field or an experienced developer seeking to expand your skill set, this seminar offers valuable insights, practical knowledge, and networking opportunities to enhance your career in full stack web development.",
+      "events_ids": [
+        2,
+        6,
+        7,
+        8
+      ],
+      "startDay": "05.06.2023",
+      "endDay": "14.06.2023"
+    },
+    {
+      "id": 3,
+      "seminarName": "Cars owners seminar",
+      "Description": "The Cars Owners Seminar is a dynamic event designed to empower and educate automobile owners of all levels of experience. Led by automotive experts and industry professionals, this seminar offers a unique opportunity to delve into the world of car ownership. Participants will gain valuable insights into maintenance best practices, troubleshooting common issues, and optimizing the performance of their vehicles. From basic maintenance tasks like oil changes and tire rotations to more advanced topics such as engine diagnostics and electrical systems, the seminar covers a wide range of automotive knowledge. Whether you're a novice car owner or a seasoned enthusiast, this seminar provides a valuable platform to enhance your understanding, confidence, and enjoyment of owning and maintaining your car.",
+      "events_ids": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "startDay": "06.06.2023",
+      "endDay": "11.06.2023"
+    }
+  ]
+}
