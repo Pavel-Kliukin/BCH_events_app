@@ -1,12 +1,12 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useFetch from './hooks/useFetch';
-import Home from "./components/Home"
-import Events from "./components/Events";
+import Home from "./pages/Home"
+import Events from "./pages/Events";
 import Signup from "./functions/Signup";
 import Login from "./functions/Login";
-import UserPage from "./components/UserPage";
-import Seminars from "./components/Seminars";
+import UserPage from "./pages/UserPage";
+import Seminars from "./pages/Seminars";
 import EventDetails from "./details-page/EventDetails";
 import SeminarDetails from "./details-page/SeminarDetails";
 import EventForm from "./components/EventForm";
