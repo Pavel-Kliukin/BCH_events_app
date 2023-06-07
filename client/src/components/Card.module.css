@@ -1,37 +1,102 @@
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  } 
-  
-  .eventCard{
+  .eventCard {
     width: 100%; /* Adjust the card width to fill the grid cell */
-    border: 1px solid #ccc;
+    max-width: 1300px;
+    border: 1px solid var(--bordo-color);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    padding: 15px;
-    margin: 10px;
+    margin: 20px 0;
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .eventImg {
+    width: 30%;
   }
   
-  .event-title {
+  .eventInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eventTitle {
+    background-color: var(--bordo-color);
     font-size: 20px;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+    color: var(--beige-color);
+  }
+
+  .infoBlocks {
+    display: flex;
+  }
+
+  .leftBlock {
+    width: 250px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .rightBlock {
+    padding: 15px;
   }
   
-  .event-description {
+  .rightBlock a {
+    text-decoration: none;
+  }
+
+  .eventTitle p {
+    padding-left: 15px;
+    margin: 0.3rem;
+  }
+  
+  .eventDescription {
     color: #666;
     font-size: 16px;
     margin-bottom: 10px;
   }
+
+  .twoButtons {
+    display: flex;
+
+  }
+
+  .ReadMore {
+    margin-right: 15px;
+    background-color: var(--beige-color);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--bordo-color);
+    color: var(--bordo-color);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .twoButtons button {
+    background-color: var(--bordo-color);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--bordo-color);
+    color: var(--beige-color);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
-  .event-date, .event-time, .event-participants {
+  
+  /* .eventDate, .eventTime {
     color: #333;
     font-size: 14px;
     margin-bottom: 5px;
-  }
+  } */
   
