@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './Seminars.module.css';
-import Header from './Header';
-import Footer from './Footer';
-import SeminarCard from './SeminarCard';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import SeminarCard from '../components/SeminarCard';
 import useFetch from '../hooks/useFetch';
 
 const Seminars = () => {

@@ -1,0 +1,48 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Didact Gothic', sans-serif;
+  position: relative;
+}
+
+.eventsBody {
+  /* background: ; */
+}
+
+.heroBanner {
+  background: url("../Assets/bchGirl.webp") no-repeat top center/cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+}
+
+.hbLeftSide {
+  width: 50vw;
+}
+
+.hbRightSide {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--beige-color);
+  font-size: 4rem;
+  letter-spacing: 3px;
+  padding: 0 15px;
+}
+
+.eventsContainer {
+  padding-top: 15px;
+  background-color: #FCDEC9;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+  
+  
