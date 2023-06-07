@@ -26,10 +26,10 @@ const Card = ({data}) => {
           <div className={style.rightBlock}>
             <p className={style.eventDescription}>{data.Description}</p>
             <div className={style.twoButtons}>
+              <button>SUBSCRIBE</button>
               <Link to={`/events/${data.id}`}>
                 <div className={style.ReadMore}>READ MORE</div>
               </Link>
-              <button>SUBSCRIBE</button>
             </div>
           </div>
         </div>
