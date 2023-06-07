@@ -1,0 +1,103 @@
+.eventBody {
+  background: url("../Assets/eventBackground.png") no-repeat center center/cover;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventBox {
+  background-color:#f9f9f9;
+  border: 2px solid var(--bordo-color);
+  border-radius: 10px;
+  width: 900px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventTitle {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--bordo-color);
+  color: var(--beige-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventData {
+  flex: 1;
+  height:auto;
+  display: flex;
+}
+
+.leftSide {
+  margin: 15px;
+}
+
+.eventImg {
+  margin-bottom: 15px;
+  width: 250px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.dateTimeBox {
+  margin-bottom: 15px;
+  height: 2.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightSide {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.parentalSeminar {
+  margin-left: auto;
+  color: #666;
+  width: 20rem;
+  height: 1.5rem;
+  background-color: var(--beige-color);
+  border: 1px solid var(--bordo-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parentalSeminar a {
+  text-decoration: none;
+}
+
+.seminarNameBox {
+  color: var(--bordo-color);
+}
+
+.signButtonBox {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.signButtonBox button {
+  background-color: var(--bordo-color);
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid var(--bordo-color);
+  color: var(--beige-color);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
