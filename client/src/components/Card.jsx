@@ -22,8 +22,14 @@ const seminar = seminars.find(s => s.id === data.parentalSeminar);
         <div className={style.eventTitle}>
           <p>{data.eventName}</p>
           <div className={style.titleEllipse}>
-      <p>{seminar ? seminar.seminarName : 'Seminar not found'}</p>
-    </div>
+        {seminar ? (
+          <Link to={`/seminars/${seminar.id}`}>
+            <p>{seminar.seminarName}</p>
+          </Link>
+        ) : (
+          <p>Seminar not found</p>
+        )}
+      </div>
 
         </div>
        
