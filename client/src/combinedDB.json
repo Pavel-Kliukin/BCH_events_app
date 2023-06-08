@@ -28,6 +28,7 @@
     "endTime": "16:20",
     "signedUsers": [2, 6, 9, 7],
     "location": {
+      "address": "Rautatieläisenkatu 5, 00520 Helsinki",
       "lat": 60.201840,
       "lng": 24.935220
     } 
@@ -43,6 +44,7 @@
     "endTime": "17:00",
     "signedUsers": [1, 3],
     "location": {
+      "address": "Rautatieläisenkatu 5, 00520 Helsinki",
       "lat": 60.201840,
       "lng": 24.935220
     } 
@@ -58,6 +60,7 @@
     "endTime": "19:30",
     "signedUsers": [4, 5, 8, 10, 11],
     "location": {
+      "address": "Rautatieläisenkatu 5, 00520 Helsinki",
       "lat": 60.201840,
       "lng": 24.935220
     }  
