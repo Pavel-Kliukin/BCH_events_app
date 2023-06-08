@@ -1,7 +1,11 @@
 import style from './Card.module.css';
 import { Link } from 'react-router-dom';
 
-const Card = ({data}) => {
+const Card = ({data,seminars}) => {
+
+  // Find the corresponding seminar for this event
+const seminar = seminars.find(s => s.id === data.parentalSeminar);
+
 
   // This is for styling 'eventImg' div
   // The image will be set as a background of 'eventImg div
@@ -17,7 +21,19 @@ const Card = ({data}) => {
       <div className={style.eventInfo}>
         <div className={style.eventTitle}>
           <p>{data.eventName}</p>
+
+          <div className={style.titleEllipse}>
+        {seminar ? (
+          <Link to={`/seminars/${seminar.id}`}>
+            <p>{seminar.seminarName}</p>
+          </Link>
+        ) : (
+          <p>Seminar not found</p>
+        )}
+      </div>
+
         </div>
+
         <div className={style.infoBlocks}>
           <div className={style.leftBlock}>
             <p className={style.eventDate}>Date: {data.day}</p>
