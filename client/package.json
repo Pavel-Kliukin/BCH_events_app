@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "json-server": "^0.17.3"
+    "json-server": "^0.17.3",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1"
   }
 }
