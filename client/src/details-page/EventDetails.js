@@ -1,22 +1,31 @@
+import React, { useCallback, useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
+import { GoogleMap, useJsApiLoader,Marker } from '@react-google-maps/api';
 import style from './EventDetails.module.css'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import combinedDB from '../combinedDB.json';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-
-L.Icon.Default.imagePath = '../node_modules/leaflet';
 
 const EventDetails = ({ users, seminars }) => {
   const { eventId } = useParams();
   const events = combinedDB.events;
   const event = events.find(event => event.id === parseInt(eventId));
 
-  if (!event) {
-    return <div>Event not found</div>;
-  }
+  const [map, setMap] = useState(null);
+
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+  });
+
+  const onLoad = useCallback(function callback(mapInstance) {
+    setMap(mapInstance);
+  }, []);
+  
+
+  const onUnmount = useCallback(function callback() {
+    setMap(null);
+  }, []);
 
   // Get the names of signed users
   const signedUsers = event.signedUsers.map(userId => {
@@ -25,7 +34,7 @@ const EventDetails = ({ users, seminars }) => {
   });
 
   // This is for styling 'eventImg' div
-  // The image will be set as a background of 'eventImg div
+  // The image will be set as a background of 'eventImg' div
   const divStyle = {
     backgroundImage: `url(${event.imgUrl})`,
     backgroundSize: 'cover',
@@ -45,7 +54,6 @@ const EventDetails = ({ users, seminars }) => {
             <h2>{event.eventName}</h2>
           </div>
           <div className={style.eventData}>
-
             <div className={style.leftSide}>
               <div className={style.eventImg} style={divStyle}></div>
               <div className={style.dateTimeBox}>
@@ -54,7 +62,6 @@ const EventDetails = ({ users, seminars }) => {
               </div>
               <p>Participants: {signedUsers.length}</p>
             </div>
-
             <div className={style.rightSide}>
               {parentalSeminar && (
                 <div className={style.parentalSeminar}>
@@ -68,21 +75,19 @@ const EventDetails = ({ users, seminars }) => {
               )}
               <br />
               <p>{event.Description}</p>
-              {event.location && (
-                <div style={{ height: '400px', width: '400px' }}>
-                  <MapContainer center={[event.location.lat, event.location.lng]} zoom={13} style={{ height: '100%', width: '100%' }}>
-                    <TileLayer
-                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    />
-                    <Marker position={[event.location.lat, event.location.lng]}>
-                      <Popup>
-                        {event.eventName}
-                      </Popup>
-                    </Marker>
-                  </MapContainer>
-                </div>
-              )}
+              {event.location && isLoaded && (
+              <GoogleMap
+                mapContainerStyle={{ height: '400px', width: '400px' }}
+                center={event.location}
+                zoom={10} // adjust this as needed
+                onLoad={onLoad}
+                onUnmount={onUnmount}
+              >
+                <Marker position={event.location} />
+              </GoogleMap>
+            )}
+
+
               <div className={style.signButtonBox}>
                 <button>SIGN IN</button>
               </div>

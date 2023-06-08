@@ -11,7 +11,6 @@ import EventDetails from "./details-page/EventDetails";
 import SeminarDetails from "./details-page/SeminarDetails";
 import EventForm from "./pages/EventForm";
 
-
 function App() {
   const eventsURL = 'http://localhost:3001/events';
   const usersURL = 'http://localhost:3001/users';
