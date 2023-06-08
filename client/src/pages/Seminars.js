@@ -14,14 +14,23 @@ const Seminars = () => {
     return (
         <div className={style.layout}>
             <Header />
-            <div className={`${style.withMargin}`}>
-                {data.map((seminarData) => (
-                    <SeminarCard key={seminarData.id} data={seminarData} />
-                ))}
+            <div className={style.eventsBody}>
+                <div className={style.heroBanner}>
+                    <div className={style.hbLeftSide}>
+                    </div>
+                    <div className={style.hbRightSide}>
+                        <div className={style.introText}>
+                            <h2>We are happy to present you our seminars</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className={style.eventsContainer}>
+                    {data.map((seminarData) => (
+                        <SeminarCard key={seminarData.id} data={seminarData} />
+                    ))}
+                </div>
             </div>
-            <Footer />
-
-        
+        <Footer />      
         </div>
     );
 };
