@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: mongo
+    volumes:
+      - ./mongodb:/data/db
+    ports:
+      - 27017:27017
+  server:
+    build: ./server
+    ports:
+      - 5000:5000
+    links:
+      - db
+    environment:
+      - DATABASE_URL=mongodb://db:27017/mern_db
+  client:
+    build: ./client
+    ports:
+      - 3000:3000
+    links:
+      - server
