@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import styles from './Signup.module.css';
+import HeaderLoginAndSignUp from "../components/HeaderLoginAndSignUp";
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -60,15 +62,18 @@ const Signup = () => {
 
   return (
     <div>
-      <h2>Signup</h2>
-      {isSignupSuccess && <p>Signup Successful!</p>}
-      <form onSubmit={handleSignup}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <HeaderLoginAndSignUp />
+
+    <div className={styles.signupContainer}>
+    <h2 className={styles.signupTitle}>Signup</h2>
+    {isSignupSuccess && <p className={styles.signupSuccess}>Signup Successful!</p>}
+    <form onSubmit={handleSignup} className={styles.signupForm}>
+      <input
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
         <input
           type="email"
           placeholder="Email"
@@ -93,10 +98,13 @@ const Signup = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        {error && <p>{error}</p>}
+       {error && <p className={styles.signupError}>{error}</p>}
         <button type="submit">Signup</button>
       </form>
-      <p>Already have an account? <Link to="/login">Log In</Link></p>
+      <div className={styles.alreadyAccountBg}>
+      <p className={styles.alreadyAccount}>Already have an account? <Link to="/login">Log In</Link></p>
+      </div>
+    </div>
     </div>
   );
 };

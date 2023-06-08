@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import styles from './Login.module.css';
+import HeaderLoginAndSignUp from "../components/HeaderLoginAndSignUp";
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -52,26 +54,30 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Login</h2>
-      {isLoginSuccess && <p>Login Successful!</p>}
-      <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {error && <p>{error}</p>}
-        <button type="submit">Login</button>
-      </form>
-      <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
-    </div>
+        <HeaderLoginAndSignUp />
+    <div className={styles.loginContainer}>
+     
+  <h2 className={styles.loginTitle}>Login</h2>
+  {isLoginSuccess && <p className={styles.loginSuccess}>Login Successful!</p>}
+  <form onSubmit={handleLogin} className={styles.loginForm}>
+    <input
+      type="text"
+      placeholder="Username"
+      value={username}
+      onChange={(e) => setUsername(e.target.value)}
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+    />
+    {error && <p className={styles.loginError}>{error}</p>}
+    <button type="submit">Login</button>
+  </form>
+  <p className={styles.signupLink}>Don't have an account? <Link to="/signup">Sign up</Link></p>
+</div>
+</div>
   );
 };
 

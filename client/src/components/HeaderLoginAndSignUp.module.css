@@ -1,0 +1,35 @@
+.header {
+    background-color: var(--bordo-color);
+    color: #FCDEC9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+  }
+  
+  .header.sticky{
+    /* position: fixed;
+    top: 0; */
+    width: 100%;
+  }
+  
+  .logoContainer {
+    margin: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+    
+  .BCHLogo {
+    background-image: url("../Assets/LogoBCH.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100px;
+    width: 385px;
+  } 
+  
+  
+      
