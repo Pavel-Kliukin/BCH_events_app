@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.eventsBody {
+.seminarsBody {
   background: url("../Assets/seminarsBackground.jpg") no-repeat top center/cover;
   background-attachment: fixed;
 }
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--beige-color);
+  color: var(--bordo-color);
   font-size: 4rem;
   letter-spacing: 3px;
   padding: 0 15px;
@@ -36,13 +36,12 @@
 .introText {
   padding: 15px;
   border-radius: 15px;
-  text-shadow: 3px 3px 2px var(--bordo-color);
+  text-shadow: 2px 2px 2px black;
   background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
 }
 
 .eventsContainer {
   padding-top: 15px;
-  /* background-color: #FCDEC9; */
   width: 100vw;
   height: 90vh;
   display: flex;

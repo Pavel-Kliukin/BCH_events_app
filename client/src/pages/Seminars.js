@@ -14,13 +14,13 @@ const Seminars = () => {
     return (
         <div className={style.layout}>
             <Header />
-            <div className={style.eventsBody}>
+            <div className={style.seminarsBody}>
                 <div className={style.heroBanner}>
                     <div className={style.hbLeftSide}>
                     </div>
                     <div className={style.hbRightSide}>
                         <div className={style.introText}>
-                            <h2>We are happy to present you our seminars</h2>
+                            <h2>Our upcoming seminars</h2>
                         </div>
                     </div>
                 </div>
