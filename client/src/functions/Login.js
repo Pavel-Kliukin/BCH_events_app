@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
+import HeaderLoginAndSignUp from "../components/HeaderLoginAndSignUp";
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -52,7 +53,10 @@ const Login = () => {
   };
 
   return (
+    <div>
+        <HeaderLoginAndSignUp />
     <div className={styles.loginContainer}>
+     
   <h2 className={styles.loginTitle}>Login</h2>
   {isLoginSuccess && <p className={styles.loginSuccess}>Login Successful!</p>}
   <form onSubmit={handleLogin} className={styles.loginForm}>
@@ -72,6 +76,7 @@ const Login = () => {
     <button type="submit">Login</button>
   </form>
   <p className={styles.signupLink}>Don't have an account? <Link to="/signup">Sign up</Link></p>
+</div>
 </div>
   );
 };

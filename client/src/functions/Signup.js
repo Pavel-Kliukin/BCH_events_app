@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './Signup.module.css';
+import HeaderLoginAndSignUp from "../components/HeaderLoginAndSignUp";
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -60,6 +61,9 @@ const Signup = () => {
   };
 
   return (
+    <div>
+        <HeaderLoginAndSignUp />
+
     <div className={styles.signupContainer}>
     <h2 className={styles.signupTitle}>Signup</h2>
     {isSignupSuccess && <p className={styles.signupSuccess}>Signup Successful!</p>}
@@ -100,6 +104,7 @@ const Signup = () => {
       <div className={styles.alreadyAccountBg}>
       <p className={styles.alreadyAccount}>Already have an account? <Link to="/login">Log In</Link></p>
       </div>
+    </div>
     </div>
   );
 };
