@@ -97,7 +97,9 @@ const Signup = () => {
        {error && <p className={styles.signupError}>{error}</p>}
         <button type="submit">Signup</button>
       </form>
-      <p>Already have an account? <Link to="/login">Log In</Link></p>
+      <div className={styles.alreadyAccountBg}>
+      <p className={styles.alreadyAccount}>Already have an account? <Link to="/login">Log In</Link></p>
+      </div>
     </div>
   );
 };
