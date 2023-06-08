@@ -7,10 +7,12 @@ import useFetch from '../hooks/useFetch';
 
 const Events = () => {
    
-    const { data, isLoading, error } = useFetch('http://localhost:3001/events');
+    const { data: events, isLoading: eventsLoading, error: eventsError } = useFetch('http://localhost:3001/events');
+    const { data: seminars, isLoading: seminarsLoading, error: seminarsError } = useFetch('http://localhost:3001/seminars');
 
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+    if (eventsLoading || seminarsLoading) return <div>Loading...</div>;
+    if (eventsError) return <div>Error: {eventsError}</div>;
+    if (seminarsError) return <div>Error: {seminarsError}</div>;
 
     return (
         <div className={style.layout}>
@@ -24,16 +26,15 @@ const Events = () => {
                     </div>
                 </div>
                 <div className={style.eventsContainer}>
-                    {data.map((eventData) => (
-                        <Card key={eventData.id} data={eventData} />
+                    {events.map((eventData) => (
+                        <Card key={eventData.id} data={eventData} seminars={seminars} />
                     ))}
                 </div>
             </div>
             <Footer />
-
-        
         </div>
     );
 };
 
 export default Events;
+

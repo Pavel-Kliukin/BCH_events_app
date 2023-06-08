@@ -25,7 +25,26 @@
     font-size: 20px;
     font-weight: bold;
     color: var(--beige-color);
+    display: flex;   
+    justify-content: space-between;  
   }
+  
+  .titleEllipse {
+    width: 200px; 
+    height: 30px; 
+    border-radius: 5px; 
+    background-color: var(--beige-color); 
+    color: black;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .titleEllipse p {
+    margin: 0;  
+  }
+  
+  
 
   .infoBlocks {
     display: flex;

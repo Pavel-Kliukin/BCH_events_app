@@ -8,6 +8,28 @@ const EventForm = () => {
   const [eventDescription, setEventDescription] = useState("");
   const [events, setEvents] = useState([]);
 
+  const [seminarName, setSeminarName] = useState("");
+  const [seminarDescription, setSeminarDescription] = useState("");
+  const [startDay, setStartDay] = useState("");
+  const [endDay, setEndDay] = useState("");
+  const [seminars, setSeminars] = useState([]);
+
+  const handleSeminarNameChange = (e) => {
+    setSeminarName(e.target.value);
+  };
+  
+  const handleSeminarDescriptionChange = (e) => {
+    setSeminarDescription(e.target.value);
+  };
+  
+  const handleStartDayChange = (e) => {
+    setStartDay(e.target.value);
+  };
+  
+  const handleEndDayChange = (e) => {
+    setEndDay(e.target.value);
+  };
+
   const handleEventTitleChange = (e) => {
     setEventTitle(e.target.value);
   };
@@ -22,8 +44,8 @@ const EventForm = () => {
 
   const handleEventDescriptionChange = (e) => {
     setEventDescription(e.target.value);
-  };
-
+  }; 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newEvent = {
@@ -32,44 +54,81 @@ const EventForm = () => {
       endDate: endDate,
       description: eventDescription,
     };
-
+  
+    const newSeminar = {
+      seminarName: seminarName,
+      Description: seminarDescription,
+      startDay: startDay,
+      endDay: endDay,
+      events_ids: [],
+    };
+  
     try {
-      const response = await axios.post('http://localhost:3001/events', newEvent);
-      setEvents([...events, response.data]);
+      const eventResponse = await axios.post('http://localhost:3001/events', newEvent);
+      newSeminar.events_ids.push(eventResponse.data.id);
+      const seminarResponse = await axios.post('http://localhost:3001/seminars', newSeminar);
+      
+      setEvents([...events, eventResponse.data]);
+      setSeminars([...seminars, seminarResponse.data]);
+      
       setEventTitle('');
       setStartDate('');
       setEndDate('');
       setEventDescription('');
+  
+      setSeminarName('');
+      setSeminarDescription('');
+      setStartDay('');
+      setEndDay('');
     } catch (error) {
       console.error(error);
     }
   };
+  
 
   return (
     <div>
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <form onSubmit={handleSubmit}>
-              <h1>Submit an event</h1>
-              <div className="mb-3">
-                <label className="form-label">Event Title:</label>
-                <input className="form-control" type="text" value={eventTitle} onChange={handleEventTitleChange} />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Start Date:</label>
-                <input className="form-control" type="date" value={startDate} onChange={handleStartDateChange} />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">End Date:</label>
-                <input className="form-control" type="date" value={endDate} onChange={handleEndDateChange} />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Event Description:</label>
-                <input className="form-control" type="text" value={eventDescription} onChange={handleEventDescriptionChange} />
-              </div>
-              <button className="btn btn-primary" type="submit">Submit</button>
-            </form>
+          <form onSubmit={handleSubmit}>
+  ...
+          <div className="mb-3">
+            <label className="form-label">Seminar Name:</label>
+            <input className="form-control" type="text" value={seminarName} onChange={handleSeminarNameChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Seminar Description:</label>
+            <input className="form-control" type="text" value={seminarDescription} onChange={handleSeminarDescriptionChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Seminar Start Day:</label>
+            <input className="form-control" type="date" value={startDay} onChange={handleStartDayChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Seminar End Day:</label>
+            <input className="form-control" type="date" value={endDay} onChange={handleEndDayChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Event Name:</label>
+            <input className="form-control" type="text" value={eventTitle} onChange={handleEventTitleChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Event Description:</label>
+            <input className="form-control" type="text" value={eventDescription} onChange={handleEventDescriptionChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Event Start Day:</label>
+            <input className="form-control" type="date" value={startDate} onChange={handleStartDateChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Event End Day:</label>
+            <input className="form-control" type="date" value={endDate} onChange={handleEndDateChange} />
+          </div>
+
+          ...
+        </form>
+
           </div>
         </div>
 
