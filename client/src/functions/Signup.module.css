@@ -1,0 +1,54 @@
+.signupContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../Assets/eventBackground.png") no-repeat top center/cover;
+    background-attachment: fixed;
+  }
+  
+  .signupTitle {
+    color: var(--beige-color);
+    font-size: 4rem;
+    letter-spacing: 3px;
+    padding: 0 15px;
+  }
+  
+  .signupForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+  }
+  
+  .signupForm input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 50%;
+  }
+  
+  .signupForm button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: black;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .signupError {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .signupSuccess {
+    color: green;
+    margin-bottom: 20px;
+  }
+  
+  .loginLink {
+    margin-top: 20px;
+    color: var(--beige-color);
+  }
+  
