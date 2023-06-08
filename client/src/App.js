@@ -9,7 +9,7 @@ import UserPage from "./pages/UserPage";
 import Seminars from "./pages/Seminars";
 import EventDetails from "./details-page/EventDetails";
 import SeminarDetails from "./details-page/SeminarDetails";
-import EventForm from "./components/EventForm";
+import EventForm from "./pages/EventForm";
 
 
 function App() {

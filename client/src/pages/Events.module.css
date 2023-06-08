@@ -13,7 +13,11 @@
   background-attachment: fixed;
 }
 
+
+
 .heroBanner {
+  background: url("../Assets/bchGirl.webp") no-repeat top center/cover;
+  background-attachment: fixed;
   width: 100vw;
   height: 75vh;
   display: flex;
@@ -37,6 +41,8 @@
 .eventsContainer {
   padding-top: 15px;
   /* background-color: #FCDEC9; */
+  background-color: #FCDEC9;
+
   width: 100vw;
   height: 90vh;
   display: flex;

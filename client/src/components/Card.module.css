@@ -1,6 +1,8 @@
   .eventCard {
+
+    width: 100%; /* Adjust the card width to fill the grid cell */
     max-width: 1300px;
-    border: 4px solid var(--beige-color);
+    border: 1px solid var(--bordo-color);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
@@ -24,7 +26,26 @@
     font-size: 20px;
     font-weight: bold;
     color: var(--beige-color);
+    display: flex;   
+    justify-content: space-between;  
   }
+  
+  .titleEllipse {
+    width: 200px; 
+    height: 30px; 
+    border-radius: 5px; 
+    background-color: var(--beige-color); 
+    color: black;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .titleEllipse p {
+    margin: 0;  
+  }
+  
+  
 
   .infoBlocks {
     display: flex;
