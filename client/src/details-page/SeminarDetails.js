@@ -4,16 +4,18 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 
-const SeminarDetails = ({ events, seminars }) => {
-    const { seminarId } = useParams();
-    const seminar = seminars.find(seminar => seminar.id === parseInt(seminarId));
-  
-    if (!seminar) {
-      return <div>Event not found</div>;
-    }
 
-    const childEvents = events.filter((event) =>
-    seminar.events_ids.includes(event.id)
+const SeminarDetails = ({ events, seminars }) => {
+  const { seminarId } = useParams();
+  const seminar = seminars.find(seminar => seminar.id === parseInt(seminarId));
+
+  if (!seminar) {
+    return <div>Event not found</div>;
+  }
+
+  // Filtering only the events whose 'parentalSeminar' property matches the 'seminarId'
+  const childEvents = events.filter((event) =>
+    event.parentalSeminar === parseInt(seminarId)
   );
 
   // This is for styling 'seminarImg' div
