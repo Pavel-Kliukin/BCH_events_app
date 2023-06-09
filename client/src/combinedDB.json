@@ -15,8 +15,8 @@
     "password": "passforbob",
     "id": 2
   }
-],
-"events": [
+ ],
+ "events": [
   {
     "id":1,
     "eventName": "Mastering the Art of Culinary Delights",
@@ -28,42 +28,49 @@
     "endTime": "16:20",
     "signedUsers": [2, 6, 9, 7],
     "location": {
+      "address": "Rautatieläisenkatu 5, 00520 Helsinki",
       "lat": 60.201840,
       "lng": 24.935220
-    } 
+    }
   },
   {
-    "id":2,
-    "eventName": "From Novice to Gourmet: A Journey through the Cook Seminar",
-    "parentalSeminar": 1,
-    "Description": "Embark on an enriching culinary journey that takes you from novice to gourmet. Join our immersive cook seminar where you'll discover the secrets of the culinary world, learn essential techniques, and transform your cooking skills into gourmet-level expertise.",
-    "imgUrl":"https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "day": "03.06.2023",
-    "startTime": "14:00",
-    "endTime": "17:00",
-    "signedUsers": [1, 3],
+    "id": 2,
+    "eventName": "The Future of Electric Vehicles",
+    "parentalSeminar": 3,
+    "Description": "This seminar gives insights into the future of electric vehicles, covering technology trends, infrastructure developments, and how these changes will impact car owners.",
+    "imgUrl": "https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg",
+    "day": "12.06.2023",
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "signedUsers": [],
     "location": {
+      "address": "Rautatieläisenkatu 5, 00520 Helsinki",
       "lat": 60.201840,
       "lng": 24.935220
-    } 
-  },
+    }
+    },
+
   {
-    "id":3,
-    "eventName": "Unleash Your Inner Chef",
-    "parentalSeminar": 1,
-    "Description": "Ignite your culinary creativity and unleash your inner chef at this inspiring event. Join us for an immersive experience where you'll discover new flavors, learn advanced techniques, and gain the confidence to create exceptional dishes that showcase your true culinary artistry.",
-    "imgUrl":"https://images.pexels.com/photos/5940831/pexels-photo-5940831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "day": "07.06.2023",
-    "startTime": "17:00",
-    "endTime": "19:30",
-    "signedUsers": [4, 5, 8, 10, 11],
+    "id": 3,
+    "eventName": "Mastering Modern Web Development Techniques",
+    "parentalSeminar": 2,
+    "Description": "Explore modern web development techniques and learn how to use them in your projects. This event will cover the latest trends in both front-end and back-end development, including new JavaScript frameworks, CSS tricks, and more.",
+    "imgUrl": "https://images.pexels.com/photos/3861970/pexels-photo-3861970.jpeg",
+    "day": "10.06.2023",
+    "startTime": "09:00",
+    "endTime": "12:00",
+    "signedUsers": [],
     "location": {
+      "address": "Rautatieläisenkatu 5, 00520 Helsinki",
       "lat": 60.201840,
       "lng": 24.935220
-    }  
+    }
   }
-],
-"seminars": [
+  
+ ],
+ 
+ 
+ "seminars": [
   {
     "id":1,
     "seminarName": "Cook seminar",
@@ -86,8 +93,10 @@
     "Description": "The Cars Owners Seminar is a dynamic event designed to empower and educate automobile owners of all levels of experience. Led by automotive experts and industry professionals, this seminar offers a unique opportunity to delve into the world of car ownership. Participants will gain valuable insights into maintenance best practices, troubleshooting common issues, and optimizing the performance of their vehicles. From basic maintenance tasks like oil changes and tire rotations to more advanced topics such as engine diagnostics and electrical systems, the seminar covers a wide range of automotive knowledge. Whether you're a novice car owner or a seasoned enthusiast, this seminar provides a valuable platform to enhance your understanding, confidence, and enjoyment of owning and maintaining your car.",
     "events_ids":[4, 5, 9, 10],
     "startDay": "06.06.2023",
-    "endDay": "11.06.2023"
+    "endDay": "18.06.2023"
   }
-
-]
-}
+ 
+ 
+ ]
+ }
+ 
