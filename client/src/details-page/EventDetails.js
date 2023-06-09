@@ -61,11 +61,19 @@ const EventDetails = ({ users, seminars }) => {
                 <p>Time: {event.startTime} - {event.endTime}</p>
               </div>
               <p>Participants: {signedUsers.length}</p>
+              <div className={style.poll}>
+               <div className={style.pollText}>
+                We want to know your opinion about this upcoming event. Please, take our survey!
+               </div>
+               <div className={style.pollButtonBox}>
+                <button>POLL</button>
+               </div>
+              </div>
             </div>
             <div className={style.rightSide}>
               {parentalSeminar && (
                 <div className={style.parentalSeminar}>
-                  This event is hosted by:{'\u00A0'}
+                  This event is a part of the{'\u00A0'}
                   <Link to={`/seminars/${parentalSeminar.id}`}>
                     <div className={style.seminarNameBox}>
                       {parentalSeminar.seminarName}
@@ -73,24 +81,34 @@ const EventDetails = ({ users, seminars }) => {
                   </Link>
                 </div>
               )}
-              <br />
-              <p>{event.Description}</p>
-              {event.location && isLoaded && (
-              <GoogleMap
-                mapContainerStyle={{ height: '400px', width: '400px' }}
-                center={event.location}
-                zoom={10} // adjust this as needed
-                onLoad={onLoad}
-                onUnmount={onUnmount}
-              >
-                <Marker position={event.location} />
-              </GoogleMap>
-            )}
-
-
-              <div className={style.signButtonBox}>
-                <button>SIGN IN</button>
+              <div className={style.description}>
+                {event.Description}
               </div>
+              
+              <div className={style.signButtonBox}>
+                <button>ATTEND</button>
+              </div>
+              <div className={style.locationBox}>
+                <div className={style.location}>
+                  <b>Location:</b> {event.location.address}
+                </div>
+
+                <div className={style.map}>
+                  {event.location && isLoaded && (
+                    <GoogleMap
+                      mapContainerStyle={{ height: '300px', width: '500px', borderRadius: '10px' }}
+                      center={event.location}
+                      zoom={13} // adjust this as needed
+                      onLoad={onLoad}
+                      onUnmount={onUnmount}
+                    >
+                      <Marker position={event.location} />
+                    </GoogleMap>
+                  )}
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>
